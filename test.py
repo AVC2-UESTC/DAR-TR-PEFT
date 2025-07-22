@@ -145,9 +145,4 @@ if __name__ == "__main__":
                                  model_cfg_args=Model_cfg['model_cfg_args'])
     
     
-    # if not os.path.exists("./work_dir"):
-    #     os.mkdir("./work_dir")
-    #     os.mkdir("./work_dir/save_models")
-    #     os.mkdir("./work_dir/save_finetunes")
-    
     main(scheduler_cfg_inst, dataset_cfg_inst, model_cfg_inst, runtime)

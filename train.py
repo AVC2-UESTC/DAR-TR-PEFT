@@ -231,7 +231,7 @@ def main(scheduler_cfg, dataset_cfg, model_cfg, runtime: Dict):
         # validate
         
         if epoch % scheduler_cfg.eval_interval == 0 or epoch == scheduler_cfg.epochs - 1:
-            # 每间隔eval_interval个epoch验证一次，减少验证频率节省训练时间
+            # Every eval_interval epochs, validate once to reduce validation frequency and save training time
             metric_info_dict = evaluate(model, val_data_loader, 
                                         device=device, 
                                         epoch=epoch, 
@@ -246,7 +246,7 @@ def main(scheduler_cfg, dataset_cfg, model_cfg, runtime: Dict):
             # save results
             # write into txt
             with open(results_file, "a") as f:
-                # 记录每个epoch对应的train_loss、lr以及验证集各指标
+                # Record the train_loss, learning rate (lr), and various evaluation metrics for each epoch
                 write_info = f"[epoch: {epoch}] train_loss: {mean_loss:.4f} lr: {lr:.6f} " \
                              f"Val_Metrics: {metric_info_dict} \n"
                 f.write(write_info)

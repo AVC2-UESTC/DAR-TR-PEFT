@@ -51,7 +51,9 @@ Please install the following dependencies:
 pip install -r requirements.txt
 ```
 
-### Best Practice
+---
+
+## Best Practice
 
 Make sure cuda 11.8 is installed in your vitual environment. Linux is recommmended.
 
@@ -82,7 +84,7 @@ Others
 pip install -r requirements.txt
 ```
 
-
+---
 
 ## Citation
 
