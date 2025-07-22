@@ -2,13 +2,13 @@
 
 <div align="center">
   <hr>
-  Cheng Lei &nbsp;
-  Ao Li &nbsp;
-  Hu Yao &nbsp;
-  Ce Zhu &nbsp;
-  Le Zhang &nbsp;
+  Cheng Lei, &nbsp;
+  Ao Li, &nbsp;
+  Hu Yao, &nbsp;
+  Ce Zhu, &nbsp;
+  Le Zhang, &nbsp;
   <br>
-    University of Electronic Science and Technology of China &nbsp;
+    University of Electronic Science and Technology of China. &nbsp;
 
   <h4>
     <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Lei_Rethinking_Token_Reduction_with_Parameter-Efficient_Fine-Tuning_in_ViT_for_Pixel-Level_CVPR_2025_paper.html">Paper</a> &nbsp; 
