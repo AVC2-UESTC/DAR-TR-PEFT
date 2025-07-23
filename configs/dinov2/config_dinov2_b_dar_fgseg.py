@@ -118,7 +118,7 @@ Scheduler_cfg = dict(
         
         batch_size=10,
         epochs=epochs,
-        eval_interval=2,
+        eval_interval=epochs + 1, # no validation during training
         amp = False,
    
         metrics_cfg=[

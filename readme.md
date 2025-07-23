@@ -26,9 +26,9 @@
 ---
 
 
-## Installation
+## Install
 
-It is reconmended to install the newest version of Pytorch and MMCV.
+For setup, refer to the [Quick Start](#quick-start) guide for a fast setup, or follow the detailed instructions below for a step-by-step configuration.
 
 ### Pytorch
 
@@ -53,7 +53,27 @@ pip install -r requirements.txt
 
 ---
 
-## Best Practice
+## Model Weights
+
+The model weights will be released soon.
+
+---
+
+## Dataset
+
+Coming soon.
+
+The following datasets are used in this paper:
+- DUTS
+- COD10K
+- CAMO
+- 
+
+---
+
+## Quick Start
+
+### Environment Setup
 
 Make sure cuda 11.8 is installed in your vitual environment. Linux is recommmended.
 
@@ -78,11 +98,42 @@ Install mmcv
 pip install mmcv==2.2.0 -f https://download.openmmlab.com/mmcv/dist/cu118/torch2.4/index.html
 ```
 
-Others
+Other dependencies
 
 ```sh
 pip install -r requirements.txt
 ```
+
+### Prepare Dataset
+
+Coming soon.
+
+We follow the ADE20K dataset format. Organize your files as follows:
+
+```
+./datassets/dataset_name/
+
+├── images/
+│   ├── training/       # Put training images here
+│   └── validation/     # Put validation images here
+└── annotations/
+    ├── training/       # Put training segmentation maps here 
+    └── validation/     # Put validation segmentation maps here 
+```
+
+### Test
+
+Put the well-trained model weights into the `model_weights` folder, and run the following command to test the model:
+
+Coming soon.
+
+### Train
+
+Coming soon.
+
+
+
+
 
 ---
 
@@ -106,4 +157,4 @@ If you find the code helpful in your research or work, please cite the following
 
 ## Acknowledgement
 
-This code is based on [MMCV](https://github.com/open-mmlab/mmcv), [DINOv2](https://github.com/facebookresearch/dinov2), [MAM](https://github.com/jxhe/unify-parameter-efficient-tuning), [DyT](https://github.com/NUS-HPC-AI-Lab/Dynamic-Tuning).
+This project is based on [MMCV](https://github.com/open-mmlab/mmcv), [timm](https://github.com/huggingface/pytorch-image-models), [DINOv2](https://github.com/facebookresearch/dinov2), [MAM](https://github.com/jxhe/unify-parameter-efficient-tuning), and [DyT](https://github.com/NUS-HPC-AI-Lab/Dynamic-Tuning). We thank the authors for their valuable contributions.
