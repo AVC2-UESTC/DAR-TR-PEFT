@@ -100,3 +100,10 @@ If you find the code helpful in your research or work, please cite the following
     pages     = {14954-14964}
 }
 ```
+
+
+---
+
+## Acknowledgement
+
+This code is based on [MMCV](https://github.com/open-mmlab/mmcv), [DINOv2](https://github.com/facebookresearch/dinov2), [MAM](https://github.com/jxhe/unify-parameter-efficient-tuning), [DyT](https://github.com/NUS-HPC-AI-Lab/Dynamic-Tuning).
