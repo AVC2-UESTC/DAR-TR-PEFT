@@ -1,0 +1,1 @@
+python test.py --config "./configs/dinov2/config_dinov2_b_dar_fgseg.py"

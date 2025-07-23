@@ -55,19 +55,26 @@ pip install -r requirements.txt
 
 ## Model Weights
 
+
+| Model| Dataset    | File |
+| --- | --- | --- |
+| DAR | DUTS    | dinov2_b_dar_duts.pth | 
+| DAR* | DUTS    | dinov2_b_dar_distill_duts.pth | 
+
+
 The model weights will be released soon.
 
 ---
 
 ## Dataset
 
-Coming soon.
-
 The following datasets are used in this paper:
-- DUTS
-- COD10K
-- CAMO
-- 
+- [DUTS](https://saliencydetection.net/duts/#orgf319326)
+- [CUHK](http://www.cse.cuhk.edu.hk/leojia/projects/dblurdetect/)
+- [COD10K](https://github.com/DengPingFan/SINet/)
+- [CAMO](https://drive.google.com/drive/folders/1h-OqZdwkuPhBvGcVAwmh0f1NGqlH_4B6)
+- [Kvasir](https://github.com/DebeshJha/2020-MediaEval-Medico-polyp-segmentation/tree/master)
+- [ISIC2017](https://challenge.isic-archive.com/data/#2017)
 
 ---
 
@@ -106,8 +113,6 @@ pip install -r requirements.txt
 
 ### Prepare Dataset
 
-Coming soon.
-
 We follow the ADE20K dataset format. Organize your files as follows:
 
 ```
@@ -123,7 +128,7 @@ We follow the ADE20K dataset format. Organize your files as follows:
 
 ### Test
 
-Put the well-trained model weights into the `model_weights` folder, and run the following command to test the model:
+Put the well-trained model weights into the `model_weights` folder, and run the following command to test the model. 
 
 Coming soon.
 

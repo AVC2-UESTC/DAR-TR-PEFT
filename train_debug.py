@@ -273,18 +273,9 @@ def main(scheduler_cfg, dataset_cfg, model_cfg, runtime: Dict):
 
 
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser()
     
-    default_config = './configs/dinov2/config_dinov2_b_dar_fgseg.py'
-    parser.add_argument('--config', default=default_config, type=str, help='Config file path for model training')
     
-    cmd_args = parser.parse_args()
-    
-    config = cmd_args.config
-    
-    # config = './configs/dinov2/config_dinov2_b_dar_fgseg.py'
-    assert os.path.exists(config), f"No such file: {config}"
+    config = './configs/dinov2/config_dinov2_b_dar_fgseg.py'
     
     config = MMConfig.fromfile(config)
     
