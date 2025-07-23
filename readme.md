@@ -113,7 +113,7 @@ pip install -r requirements.txt
 
 ### Prepare Dataset
 
-We follow the ADE20K dataset format. Organize your files as follows:
+We follow the [ADE20K](https://github.com/CSAILVision/semantic-segmentation-pytorch) dataset format. Organize your files as follows:
 
 ```
 ./datassets/dataset_name/
@@ -128,13 +128,34 @@ We follow the ADE20K dataset format. Organize your files as follows:
 
 ### Test
 
-Put the well-trained model weights into the `model_weights` folder, and run the following command to test the model. 
+Put the model weights into the `model_weights` folder, and run the following command to test the model. 
 
-Coming soon.
+```sh
+python test.py --config config/path
+# or
+sh test.sh # for linux
+# or
+test.bat # for windows
+# remember to modify the path in test.sh or test.bat
+```
 
 ### Train
 
-Coming soon.
+Put the pre-trained weights into the `model_weights` folder, and run the following command to train the model. 
+
+```sh
+python train.py --config config/path
+# or
+sh train.sh # for linux
+# or
+train.bat # for windows
+# remember to modify the path in test.sh or test.bat
+```
+
+
+### Debug
+
+If you want to debug the code, ckeck `train_debug.py` and `test_debug.py`.
 
 
 
