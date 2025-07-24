@@ -55,14 +55,34 @@ pip install -r requirements.txt
 
 ## Model Weights
 
+### Pretrained Weights
 
-| Model| Dataset    | File |
-| --- | --- | --- |
-| DAR | DUTS    | dinov2_b_dar_duts.pth | 
-| DAR* | DUTS    | dinov2_b_dar_distill_duts.pth | 
+You can download the pretrained weights `dinov2_vitb14_pretrain.pth` from [DINOv2](https://github.com/facebookresearch/dinov2) or [here](https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_pretrain.pth).
+
+```sh
+python convert_pt_weights.py # not ready yet
+```
+
+For training, put the converted weights in the `model_weights` folder.
+
+### Fine-tuned Weights
+
+| Method | Dataset    | Weights | Configs |
+| --- | --- | --- | --- |
+| DAR | DUTS    | [dinov2_b_dar_duts.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_duts.pth) | [config](./configs/dinov2/config_dinov2_b_dar_duts.py) |
+| DAR* | DUTS    | [dinov2_b_dar_distill_duts.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_duts.pth) | |
+| DAR | CUHK    | [dinov2_b_dar_defocus.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_defocus.pth) |  |
+| DAR* | CUHK    | [dinov2_b_dar_distill_defocus.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_defocus.pth) |  |
+| DAR | COD10K, CAMO   | [dinov2_b_dar_cod.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_cod.pth) |  |
+| DAR* | COD10K, CAMO    | [dinov2_b_dar_distill_cod.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_cod.pth) |  |
+| DAR | Kvasir    | [dinov2_b_dar_polyp.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_polyp.pth) |  |
+| DAR* | Kvasir    | [dinov2_b_dar_distill_polyp.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_polyp.pth) |  |
+| DAR | ISIC2017    | [dinov2_b_dar_skin.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_skin.pth) |  |
+| DAR* | ISIC2017    | [dinov2_b_dar_distill_skin.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_skin.pth) |  |
 
 
-The model weights will be released soon.
+For testing, put the pretrained weights and fine-tuned weights in the `model_weights` folder.
+
 
 ---
 
@@ -113,10 +133,10 @@ pip install -r requirements.txt
 
 ### Prepare Dataset
 
-We follow the [ADE20K](https://github.com/CSAILVision/semantic-segmentation-pytorch) dataset format. Organize your files as follows:
+We follow the [ADE20K](https://github.com/CSAILVision/semantic-segmentation-pytorch) dataset format. Organize your dataset files as follows:
 
 ```
-./datassets/dataset_name/
+./datasets/dataset_name/
 
 ├── images/
 │   ├── training/       # Put training images here
