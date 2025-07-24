@@ -60,7 +60,7 @@ pip install -r requirements.txt
 You can download the pretrained weights `dinov2_vitb14_pretrain.pth` from [DINOv2](https://github.com/facebookresearch/dinov2) or [here](https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_pretrain.pth).
 
 ```sh
-python convert_pt_weights.py # not ready yet
+python convert_pt_weights.py 
 ```
 
 For training, put the converted weights in the `model_weights` folder.
@@ -70,14 +70,14 @@ For training, put the converted weights in the `model_weights` folder.
 | Method | Dataset    | Weights | Configs |
 | --- | --- | --- | --- |
 | DAR | DUTS    | [dinov2_b_dar_duts.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_duts.pth) | [config](./configs/dinov2/config_dinov2_b_dar_duts.py) |
-| DAR* | DUTS    | [dinov2_b_dar_distill_duts.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_duts.pth) | |
-| DAR | CUHK    | [dinov2_b_dar_defocus.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_defocus.pth) |  |
+| DAR* | DUTS    | [dinov2_b_dar_distill_duts.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_duts.pth) |  |
+| DAR | CUHK    | [dinov2_b_dar_defocus.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_defocus.pth) | [config](./configs/dinov2/config_dinov2_b_dar_defocus.py) |
 | DAR* | CUHK    | [dinov2_b_dar_distill_defocus.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_defocus.pth) |  |
-| DAR | COD10K, CAMO   | [dinov2_b_dar_cod.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_cod.pth) |  |
+| DAR | COD10K, CAMO   | [dinov2_b_dar_cod.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_cod.pth) | [config](./configs/dinov2/config_dinov2_b_dar_cod.py) |
 | DAR* | COD10K, CAMO    | [dinov2_b_dar_distill_cod.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_cod.pth) |  |
-| DAR | Kvasir    | [dinov2_b_dar_polyp.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_polyp.pth) |  |
+| DAR | Kvasir    | [dinov2_b_dar_polyp.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_polyp.pth) | [config](./configs/dinov2/config_dinov2_b_dar_polyp.py) |
 | DAR* | Kvasir    | [dinov2_b_dar_distill_polyp.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_polyp.pth) |  |
-| DAR | ISIC2017    | [dinov2_b_dar_skin.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_skin.pth) |  |
+| DAR | ISIC2017    | [dinov2_b_dar_skin.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_skin.pth) | [config](./configs/dinov2/config_dinov2_b_dar_skin.py) |
 | DAR* | ISIC2017    | [dinov2_b_dar_distill_skin.pth](https://github.com/AVC2-UESTC/DAR-TR-PEFT/releases/download/weights/dinov2_b_dar_distill_skin.pth) |  |
 
 
@@ -102,7 +102,7 @@ The following datasets are used in this paper:
 
 ### Environment Setup
 
-Make sure cuda 11.8 is installed in your vitual environment. Linux is recommmended.
+Make sure cuda 11.8 is installed in your virtual environment. Linux is recommmended.
 
 Install pytorch
 

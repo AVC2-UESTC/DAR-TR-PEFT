@@ -16,12 +16,12 @@ Dataset_cfg = dict(
     dataset_cfg_args=dict(
         # data_root=['./datasets/CAMO', './datasets/COD10KCAM'], 
         # data_root = './datasets/DUTS',
-        data_root='./datasets/DUTS', 
+        # data_root='./datasets/DUTS', 
         # data_root='./datasets/CHAMELEON', 
         # data_root='./datasets/COD10KCAM', 
-        # data_root='./datasets/KvasirSEG',
+        data_root='./datasets/KvasirSEG',
         # data_root='./datasets/ISIC2017',
-        # seg_map_suffix = '.jpg', 
+        seg_map_suffix = '.jpg', 
         # img_suffix = '.png',
         truncate_ratio=None,
         transform_cfg_args=dict(
@@ -93,8 +93,8 @@ Dataset_cfg = dict(
     )
 )
 
-warmup = 4
-epochs = 16
+warmup = 10
+epochs = 40
 Scheduler_cfg = dict(
     scheduler_cfg_args=dict(
         device='cuda',
@@ -175,7 +175,7 @@ Model_cfg = dict(
         pretrained_weights = './model_weights/dinov2_vitb14_pretrain_new.pth',
         
         # uncomment the following line to use the finetuned weights for testing.
-        # finetune_weights = './model_weights/dinov2_b_dar_duts.pth', 
+        # finetune_weights = './model_weights/dinov2_b_dar_polyp.pth', 
     
 
         tuning_mode = 'PEFT',
