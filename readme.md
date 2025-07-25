@@ -87,7 +87,7 @@ For training, put the converted weights in the `model_weights` folder.
 
 For testing, put the pretrained weights and fine-tuned weights in the `model_weights` folder.
 
-For DAR*, check `config_dinov2_b_dar_distill_fgseg_train.py` and `config_dinov2_b_dar_distill_fgseg_test`.
+For DAR*, check `config_dinov2_b_dar_distill_fgseg_train.py` and `config_dinov2_b_dar_distill_fgseg_test.py`.
 
 ---
 
