@@ -59,11 +59,15 @@ pip install -r requirements.txt
 
 You can download the pretrained weights `dinov2_vitb14_pretrain.pth` from [DINOv2](https://github.com/facebookresearch/dinov2) or [here](https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_pretrain.pth).
 
+Run the following command to convert the PyTorch weights to the format used in this repository.
+
 ```sh
 python convert_pt_weights.py 
 ```
 
 For training, put the converted weights in the `model_weights` folder.
+
+
 
 ### Fine-tuned Weights
 
@@ -83,6 +87,7 @@ For training, put the converted weights in the `model_weights` folder.
 
 For testing, put the pretrained weights and fine-tuned weights in the `model_weights` folder.
 
+For DAR*, check `config_dinov2_b_dar_distill_fgseg_train.py` and `config_dinov2_b_dar_distill_fgseg_test`.
 
 ---
 

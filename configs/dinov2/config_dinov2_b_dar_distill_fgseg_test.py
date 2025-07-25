@@ -235,6 +235,7 @@ Model_cfg = dict(
         ),
         
         threshold=None,
+        #loss decode is not used.
         loss_decode=[
             dict(
                 loss_type="BCEWithLogitsLoss",
@@ -243,22 +244,22 @@ Model_cfg = dict(
                 loss_name="mask_loss_bce"
             ),
             
-            dict(
-                loss_type="DiceLoss",
-                reduction="mean",
-                loss_weight=0.5,
-                loss_name="mask_loss_dice"
-            ), 
+            # dict(
+            #     loss_type="DiceLoss",
+            #     reduction="mean",
+            #     loss_weight=0.5,
+            #     loss_name="mask_loss_dice"
+            # ), 
             
-            dict(
-                loss_type='AdaLoss', 
-                reduction="mean",
-                loss_weight=2.0,
-                loss_name='tokenreg_loss_adaloss',
-                loss_args=dict(
-                    token_target_ratio=0.5
-                )
-            ),
+            # dict(
+            #     loss_type='AdaLoss', 
+            #     reduction="mean",
+            #     loss_weight=2.0,
+            #     loss_name='tokenreg_loss_adaloss',
+            #     loss_args=dict(
+            #         token_target_ratio=0.5
+            #     )
+            # ),
             
             
             
